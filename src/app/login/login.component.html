@@ -1,3 +1,38 @@
-<p>
-  login works!
-</p>
+<ion-content fullscreen class="login-wrapper">
+  <div class="logo-card-wrap">
+    <div class="login-img"><img src="/assets/logo.png" /></div>
+    <div class="login-card-wrapper">
+      <ion-card>
+        <ion-card-header [ngClass]="{'showBoxShadow': showVerificationCard && !showSuccessScreenImage}">
+          <ion-card-subtitle *ngIf="!showVerificationCard">Welcome to Genie</ion-card-subtitle>
+          <ion-card-subtitle *ngIf="showVerificationCard && !showSuccessScreenImage">
+            OTP Verification
+            <p>4 Digit Verification Code sent to Your <br />
+              Registered Mobile Number
+            </p>
+            <div class="otp-field">
+              <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="config"></ng-otp-input>
+            </div>
+            <p>Didn't get OTP ? <span>Resend</span></p>
+            <ion-button expand="block" class="login-button" (click)="showSuccessScreen()" [disabled]="disableVerifyButton">Verify</ion-button>
+          </ion-card-subtitle>
+          <ion-card-subtitle *ngIf="showSuccessScreenImage">Successfully Registered!</ion-card-subtitle>
+          <ion-card-content [ngClass]="{'success-card': showSuccessScreenImage}">
+            <form *ngIf="!showVerificationCard" [formGroup]="loginForm" (ngSubmit)="login()">
+              <ion-input [pattern]="mobNumberPattern" required formControlName="mobileNumber" class="login-fields" type="tel" placeholder="Enter Mobile Number"></ion-input>
+              <ion-input required formControlName="password" class="login-fields" type="password" placeholder="Enter Password"></ion-input>
+              <ion-button type="submit" [disabled]="loginForm.invalid" expand="block" class="login-button">Login</ion-button>
+            </form>
+            <div class="success-wrap" *ngIf="showSuccessScreenImage">
+              <img src="/assets/success.png" />
+              <h2>Hurrah!</h2>
+              <p>Now, You can shop with our Genie!</p>
+            </div>
+            
+            <button *ngIf="showVerificationCard && !showSuccessScreenImage" (click)="login()">Back</button>
+          </ion-card-content>
+        </ion-card-header>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

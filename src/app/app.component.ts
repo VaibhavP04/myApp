@@ -24,20 +24,22 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.platform.backButton.subscribeWithPriority(9999, () => {
+        document.addEventListener('backbutton', function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+        }, false);
+      });
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.storage.get('initial').then((initialVal) => {
-        this.storage.get('secondLaunch').then((secondLaunch) => {
-          if (initialVal && secondLaunch) {
-            this.router.navigate(['/tabs']);
-          } else if (initialVal !==null) {
+          if (initialVal !==null) {
             this.storage.set('secondLaunch', true);
             this.router.navigate(['/login']);
           } else {
             this.storage.set('initial', true);
             this.router.navigate(['/intro']);
           }
-        })
       });
     });
   }
