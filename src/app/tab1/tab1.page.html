@@ -1,16 +1,65 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-grid>
+    <ion-row class="user-details">
+      <ion-col size="8">
+        <h2>Hello, Genie!</h2>
+        <span><img src="/assets/ic_gps.png" /> Bangalore city</span>
+      </ion-col>
+      <ion-col size="4" class="ion-text-end ion-align-self-end">
+        <img src="/assets/ic_search.png" />
+      </ion-col>
+    </ion-row>
+    <ion-row class="restaurants-fav-list">
+      <ion-col size="12">
+        <h3>Trending Restaurants</h3>
+        <ion-slides>
+          <ion-slide>
+            <img src="/assets/ic_plateone.png">
+          </ion-slide>
+          <ion-slide>
+            <img src="/assets/ic_platetwo.png">
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <p>What would you like to do today?</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="category-list ion-padding">
+      <ion-col size="4">
+        <div class="categories" (click)="navigate()">
+          <img src="/assets/ic_restaurenticon.png" />
+          <label>Restaurant</label>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div class="categories">
+          <img src="/assets/ic_grocery.png" />
+          <label>Grocery & vegetables</label>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div class="categories">
+          <img src="/assets/ic_bookstallicon.png" />
+          <label>Book stalls</label>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="category-list">
+      <ion-col size="4">
+        <div class="categories">
+          <img src="/assets/ic_packericon.png" />
+          <label>Packers & Movers</label>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div class="categories">
+          <img src="/assets/ic_giftsicon.png" />
+          <label>Gifts</label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

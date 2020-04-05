@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
   showSuccessScreen() {
     this.showSuccessScreenImage = !this.showSuccessScreenImage;
     setTimeout(() => {
-      this.router.navigate(['/tabs']);
+      this.router.navigate(['/location']);
     }, 2000);
   }
 
