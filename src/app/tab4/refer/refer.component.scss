@@ -1,0 +1,31 @@
+.refer-img{
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 30px;
+    p{
+        color: #005ef6;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    span{
+        font-size: 18px;
+    }
+}
+
+ion-input {
+    border: 1px solid #b1b1b1;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    height: 50px;
+}
+
+ion-button{
+    width: 100%;
+    height: 60px;
+    padding: 0 10px;
+    text-transform: capitalize;
+    font-size: 16px;
+}

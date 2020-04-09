@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button defaultHref="/tabs/tab4"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Refer a Partner</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="refer-img">
+    <img src="assets/ic_referapartner.png" />
+    <p>Empower Someone Today.</p>
+    <span>Refer them to Genie!</span>
+  </div>
+
+  <ion-row>
+    <ion-col>
+      <ion-input placeholder="Full Name"></ion-input>
+      <ion-input placeholder="Mobile Number"></ion-input>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-footer>
+  <ion-button color="primary" routerDirection="backward" routerLink="/tabs/tab4">Confirm</ion-button>
+</ion-footer>
