@@ -1,0 +1,107 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button defaultHref="/order-summary"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Confirm Order
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row class="order-status-top-row">
+    <ion-col size="12">
+      <ul class="order-lists">
+        <li>
+          <div class="align-start">
+            <p>French Fries</p>
+            <p>75/-</p>
+          </div>
+          <div class="align-end">
+            *1
+          </div>
+        </li>
+        <li>
+          <div class="align-start">
+            <p>Red Forest Ice Cream</p>
+            <p>150/-</p>
+          </div>
+          <div class="align-end">
+            *1
+          </div>
+        </li>
+      </ul>
+    </ion-col>
+  </ion-row>
+  <div class="divider"></div>
+  <div class="instruction-wrap">
+    <ion-icon name="create-outline"></ion-icon>
+    <p>Any instructions? Eg. Don't ring the doorbell</p>
+  </div>
+  <div class="divider"></div>
+  <ion-row>
+    <ion-col size="12">
+      <div class="payment-details">
+      <h4>Payment Details</h4>
+        <ul>
+          <li>
+            <p>Item Total</p>
+            <p>265/-</p>
+          </li>
+          <li>
+            <p>Tax</p>
+            <p>2/-</p>
+          </li>
+          <li>
+            <p>Packing</p>
+            <p>20/-</p>
+          </li>
+          <li>
+            <p>Partner Delivery Fee</p>
+            <p>Free</p>
+          </li>
+          <li>
+            <p>Genie Offer Discount</p>
+            <p>20/-</p>
+          </li>
+          <li class="total-price">
+            <p>Total</p>
+            <p>267/-</p>
+          </li>
+          <li class="total-price">
+            <p>Your Total Savings</p>
+            <p>20/-</p>
+          </li>
+        </ul>
+      </div>
+    </ion-col>
+  </ion-row>
+  <div class="divider"></div>
+  <ion-row class="address-details">
+    <ion-col size="8">
+      <p>Deliver to <b>HOME</b></p>
+      <p>188, Prestige Colony, Gopi Residen...</p>
+    </ion-col>
+    <ion-col size="4" class="ion-text-end ion-align-self-center">
+      <a href="javascript:void(0);">Change</a>
+    </ion-col>
+  </ion-row>
+  <div class="saved-locations">
+    <ion-chip>
+      <ion-label color="primary">Home</ion-label>
+    </ion-chip>
+    <ion-chip>
+      <ion-label color="primary">Office</ion-label>
+    </ion-chip>
+    <ion-chip>
+      <ion-label color="primary">Others</ion-label>
+    </ion-chip>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-button color="primary" routerDirection="forward" routerLink="/payment">Confirm Order</ion-button>
+</ion-footer>

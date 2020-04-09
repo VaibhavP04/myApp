@@ -1,0 +1,134 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <a class="ion-align-self-end support-link" href="javascript:void(0);">Support</a>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="present-order">
+    <p>Order Summary</p>
+  </div>
+  <div class="order-summary-wrap">
+    <ion-row class="order-status-top-row">
+      <ion-col size="8">
+        <p><b>Happy Bones</b></p>
+        <address>#394, Same St, Bangalore, 560011</address>
+      </ion-col>
+      <ion-col class="ion-text-end" size="4">
+        <span class="ratings"><img src="/assets/ic_goldstar.png"/>4.5</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <h4>Your Order</h4>
+        <ul class="order-lists">
+          <li>
+            <div class="align-start">
+              <p>French Fries</p>
+              <p>75/-</p>
+            </div>
+            <div class="align-end">
+              *1
+            </div>
+          </li>
+          <li>
+            <div class="align-start">
+              <p>Red Forest Ice Cream</p>
+              <p>150/-</p>
+            </div>
+            <div class="align-end">
+              *1
+            </div>
+          </li>
+        </ul>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <h4>Payment Details</h4>
+        <div class="payment-details">
+          <ul>
+            <li>
+              <p>Item Total</p>
+              <p>265/-</p>
+            </li>
+            <li>
+              <p>Tax</p>
+              <p>2/-</p>
+            </li>
+            <li>
+              <p>Packing</p>
+              <p>20/-</p>
+            </li>
+            <li>
+              <p>Partner Delivery Fee</p>
+              <p>Free</p>
+            </li>
+            <li>
+              <p>Genie Offer Discount</p>
+              <p>20/-</p>
+            </li>
+            <li class="total-price">
+              <p>Total</p>
+              <p>267/-</p>
+            </li>
+            <li class="total-price">
+              <p>Your Total Savings</p>
+              <p>20/-</p>
+            </li>
+          </ul>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <h4>Order Details</h4>
+        <div class="order-details">
+          <ion-row>
+            <ion-col>
+              <label>Order Number</label>
+              <p>8739A2849B</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <label>Payment</label>
+              <p>Paid: Using Debit Card</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <label>Date</label>
+              <p>15 Jan 2020 at 5:44 AM</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <label>Phone Number</label>
+              <p>9700635377</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <label>Deliver to</label>
+              <p>188, Prestige Residency, Marvel Colony, Melton <br />
+                Point, Bangalore - 617888
+              </p>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-button color="primary" routerDirection="forward" routerLink="/confirm-order">Repeat Order</ion-button>
+</ion-footer>

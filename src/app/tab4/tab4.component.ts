@@ -7,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab4Component implements OnInit {
 
+  showAccountDetails = false;
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
+
+  showEditAccount() {
+    this.showAccountDetails = true
+  }
 
 }

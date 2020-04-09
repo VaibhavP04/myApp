@@ -1,3 +1,59 @@
-<p>
-  tab4 works!
-</p>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row class="ion-padding">
+    <ion-col size="12">
+      <p *ngIf="!showAccountDetails"><b>+91 9700635377</b></p>
+      <p *ngIf="showAccountDetails"><b>Genie User</b></p>
+      <a href="javascript:void(0);" (click)="showEditAccount()" *ngIf="!showAccountDetails">Complete account setup ></a>
+      <a href="javascript:void(0);" *ngIf="showAccountDetails" routerDirection="forward" routerLink="/update-profile">Edit account ></a>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <img src="/assets/ic_bgprofile.png" />
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <ul class="profile-lists">
+        <li>
+          <a href="javascript:void(0);" routerDirection="forward" routerLink="/payment-update">Payment Method</a>
+          <img src="/assets/ic_profilepayment.png" />
+        </li>
+        <li>
+          <a href="javascript:void(0);" routerDirection="forward" routerLink="/save-address">Saved Address</a>
+          <img src="/assets/ic_profileaddress.png" />
+        </li>
+        <li>
+          <a href="javascript:void(0);" routerDirection="forward" routerLink="/refer">Refer a Partner</a>
+          <img src="/assets/ic_profilerefer.png" />
+        </li>
+        <li>
+          <a href="javascript:void(0);" routerDirection="forward" routerLink="/support">Support</a>
+          <img src="/assets/ic_support.png" />
+        </li>
+        <li>
+          <a href="javascript:void(0);" routerDirection="forward" routerLink="/about">About</a>
+          <img src="/assets/ic_about.png" />
+        </li>
+      </ul>
+    </ion-col>
+    <ion-row class="ion-padding version">
+      <ion-col size="12"><p>Version 9.3.0.1</p></ion-col>
+    </ion-row>
+  </ion-row>
+</ion-content>
+
+<ion-footer>
+  <ion-button routerDirection="forward" routerLink="/login">Logout</ion-button>
+</ion-footer>
