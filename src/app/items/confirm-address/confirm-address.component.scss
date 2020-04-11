@@ -1,0 +1,38 @@
+.address-details{
+    padding: 0 20px;
+    a{
+        text-decoration: none;
+    }
+}
+
+
+.saved-locations{
+    padding: 0 20px;
+    ion-chip{
+        margin-right: 20px;
+        &:nth-child(1){
+            ion-label{
+                color: #3880ff;
+            }
+        }
+        ion-label{
+            color: #b7b1b1;
+            text-transform: uppercase;
+        }
+    }
+}
+
+ion-footer{
+    p{
+        color: #b1b1b1;
+        span{
+            color: #005ef6;
+        }
+    }
+    ion-button{
+        font-weight: 400;
+        --border-radius: 50px;
+        text-transform: capitalize;
+        width: 120px;
+    }
+}

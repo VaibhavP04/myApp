@@ -1,0 +1,78 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button defaultHref="/tabs/tab1" (click)="closeModal()"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Back to Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="order-sucess-wrap">
+    <p class="confirm-txt">Order Confirmerd</p>
+    <p>Order ID 8739A2849B</p>
+  </div>
+  <!-- <ion-row class="order-status-top-row" *ngFor="let item in cartItems">
+    <ion-col size="12">
+      <ul class="order-lists" >
+        <li>
+          <div class="align-start">
+            <p>French Fries</p>
+            <p>75/-</p>
+          </div>
+          <div class="align-end">
+            *1
+          </div>
+        </li>
+        <li>
+          <div class="align-start">
+            <p>Red Forest Ice Cream</p>
+            <p>150/-</p>
+          </div>
+          <div class="align-end">
+            *1
+          </div>
+        </li>
+      </ul>
+    </ion-col>
+  </ion-row> -->
+  <ion-list *ngFor="let item of cartItems">
+    <ion-item no-lines>
+      <ion-label class="itemLabel">
+        <p class="item">
+          {{item.name}}
+        </p>
+        <p class="item">
+          Rs{{item.price}}/-
+        </p>
+      </ion-label>
+      <div class="align-end itemQty">
+        *1
+      </div>
+
+    </ion-item>
+  </ion-list>
+  <ion-row>
+    <ion-col size="12">
+      <div class="payment-details">
+        <h4>Payment Details</h4>
+        <ul>
+          <li>
+            <p>C. GST @18%</p>
+            <p>Free</p>
+          </li>
+          <li>
+            <p>S. GST @18%</p>
+            <p>20/-</p>
+          </li>
+          <li>
+            <p>Total Amount Paid</p>
+            <p>{{cart.totalPrice}}/-</p>
+          </li>
+        </ul>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>

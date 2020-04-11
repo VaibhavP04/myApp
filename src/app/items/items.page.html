@@ -1,0 +1,110 @@
+<ion-header>
+  <img src="/assets/ic_plateone.png" class="headerImg">
+
+  <div>
+    <span class="headerIcon headerIconleft">
+      <ion-icon name="arrow-back-outline" class="headerIconColor" (click)="goBack()"></ion-icon>
+    </span>
+    <span class="headerIcon headerIconRight">
+      <ion-icon name="share-social-outline" class="headerIconColor"></ion-icon>
+      <ion-icon name="bookmark-outline" class="headerIconColor"></ion-icon>
+    </span>
+
+  </div>
+  <div class="myOverlay">
+    <ion-row>
+      <ion-col col-3>
+        <img src="./assets/ic_offertag.png" style="margin-left: 20px;width: 30px;margin-top: 10px;" > 
+      </ion-col>
+      <ion-col col-5>
+        <p class="overlayTxt" style="margin-top: 0px;">50% off on every order</p>
+      </ion-col>
+
+      <ion-col col-3>
+        <img src="./assets/ic_time.png" style="margin-left: 20px; width: 30px; margin-top: 10px;"> 
+      </ion-col>
+      <ion-col col-5>
+        <p class="overlayTxt">20 MIns</p>
+      </ion-col>
+      
+    </ion-row>
+     
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-label class="headerLabel">
+      Happy Bones
+      <div class="chip-right">
+        <ion-chip class="chipFont">
+          <ion-icon name="star" class="startIcon"></ion-icon>
+          <ion-label>4.5</ion-label>
+        </ion-chip>
+      </div>
+    </ion-label>
+    <div>
+      <p class="subHeading">
+        <span class="floatLeft">
+          #394, Some st, Bangalore, 560021
+        </span>
+        <span class="floatRight">
+          Open now
+        </span>
+      </p>
+
+    </div>
+  </div>
+
+  <div class="ion-padding search-bar" >
+    <ion-searchbar showCancelButton="never" color="white" class="searchBar"></ion-searchbar>
+    <ion-item>
+      <span>Veg</span>
+      <ion-toggle slot="start" name="blueberry"></ion-toggle>
+    </ion-item>
+  </div>
+
+  <div>
+    <ion-list *ngFor="let item of items">
+      <ion-item no-lines>
+        <div class="vegOrNonVegSquare"></div>
+        <ion-label class="itemLabel">
+          <p class="item">
+            {{item.name}}
+          </p>
+          <p class="item">
+            Rs{{item.price}}/-
+          </p>
+        </ion-label>
+        <ion-button expand="full" *ngIf="item.qtyInCart == 0" (click)="addToCart(item.id)" fill="outline" slot="end"
+          size="small" shape="round" class="addButton">ADD</ion-button>
+
+        <div *ngIf="item.qtyInCart != 0" class="showIncDec">
+          <ion-row class="btn-qty-add">
+            <ion-col col-4 class="add-cart-decrement" (click)="decrementCount(item.id)">
+              <div><span class="product-title">-</span></div>
+            </ion-col>
+            <ion-col col-4 class="add-cart-count">
+              <div><span class="product-title">{{item.qtyInCart}}</span></div>
+            </ion-col>
+            <ion-col col-4 class="add-cart-increment" (click)="increamentCount(item.id)">
+              <div><span class="product-title">+</span></div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>
+
+<ion-footer *ngIf="cart.qty != 0">
+  <ion-row class="ion-padding">
+    <ion-col size="6">
+      <p><span>{{cart.qty}} items.</span> Rs {{cart.totalPrice}}/-</p>
+    </ion-col>
+    <ion-col size="6" class="ion-align-self-end ion-text-end">
+      <ion-button color="primary" (click)="OpenModel()">Continue</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

@@ -243,3 +243,16 @@ html,body{
     list-style-type: none;
   }
 }
+
+.searchbar-input.sc-ion-searchbar-md{
+  border-radius: 50px;
+}
+
+.change-address-shipping-modal{
+  --height:60%;
+  align-items: flex-end;
+  .modal-wrapper.sc-ion-modal-ios, .modal-shadow.sc-ion-modal-ios{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}

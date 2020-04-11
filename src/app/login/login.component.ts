@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -14,7 +14,16 @@ export class LoginComponent implements OnInit {
   showSuccessScreenImage = false;
   loginForm: FormGroup;
   mobNumberPattern = "^((\\+91-?)|0)?[0-9]{10}$";
-  constructor(private router: Router) { }
+  constructor(private router: Router, private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(params => {
+      if (this.router.getCurrentNavigation().extras.state) {
+        if(this.router.getCurrentNavigation().extras.state.logout){
+          this.showSuccessScreenImage = false;
+          this.showVerificationCard = false;
+        }
+      }
+    });
+   }
 
   config = {
     length:4,
@@ -40,6 +49,7 @@ export class LoginComponent implements OnInit {
       return;
     }
     this.showVerificationCard = !this.showVerificationCard;
+    this.loginForm.reset();
   }
 
   showSuccessScreen() {

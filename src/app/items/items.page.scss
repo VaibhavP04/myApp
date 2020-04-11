@@ -1,0 +1,204 @@
+img {
+    width: -webkit-fill-available;
+}
+
+.myOverlay{
+    width: 80%;
+    height: 60px;
+    position: absolute;
+    z-index: 99;
+    bottom: 25px;
+    opacity: 0.5;
+    background: #000;
+    color: #fff;
+    right: 33px;
+    border-radius: 30px;
+
+}
+
+.chip-left {
+    padding:5px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.headerIcon {
+    padding:5px;
+    position:absolute;
+    top:40px;
+}
+
+.headerIconleft {
+    left:20px;
+}
+
+.headerIconRight {
+    right:20px;
+}
+
+.chip-right {
+    padding:5px;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+.input.searchbar-input.sc-ion-searchbar-ios {
+    border: 0.1px solid black;
+}
+
+.headerImg {
+    opacity: 0.8;
+}
+
+.vegOrNonVegSquare {
+    border: solid 1px #00FF00;
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+}
+
+.addButton {
+    width: 75px;
+}
+ 
+.itemLabel {
+    padding-left: 20px;
+}
+
+.headerIconColor {
+    color: white;
+    font-size: 40px;
+}
+
+.headerLabel {
+    font-size: 27px;
+}
+
+.chipPosition{
+    margin-left: 177px;
+}
+
+.chipFont{
+    font-size: 10px
+}
+
+.startIcon {
+    color: orange;
+}
+
+.subHeading {
+    font-size: 12px;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+    color: green;
+}
+
+.searchBar {
+    width: 60%;
+    padding-left: 0px;
+}
+
+.item {
+    font-weight: 900;
+}
+
+.search-bar{
+    display: flex;
+    ion-label{
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+ion-footer{
+    p{
+        color: #b1b1b1;
+        span{
+            color: #005ef6;
+        }
+    }
+    ion-button{
+        font-weight: 400;
+        --border-radius: 50px;
+        text-transform: capitalize;
+        width: 120px;
+    }
+
+    .customButton {
+        border: solid 1px #3880FF;
+        width: 75px;
+        height: 24px;
+        border-radius: 30px;
+        margin-right:10px
+    }
+
+  
+
+    
+}
+
+.btn-qty-add {
+    padding-left: 1em;
+    margin-top: 3px;
+    padding-right: 1em;
+    padding-bottom: 0.4em;
+    .add-cart-increment {
+        border: 1px solid #3880FF;
+        text-align: center;
+        vertical-align: middle;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 3px;
+        width: 45px;
+        //background-color: 3880FF;
+    }
+    .product-title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #3880FF;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .add-cart-decrement {
+        border: 1px solid #3880FF;
+        text-align: center;
+        vertical-align: middle;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        padding: 3px;
+    }
+    .add-cart-count {
+        //border: 1px solid #3880FF;
+        text-align: center;
+        vertical-align: middle;
+        padding: 3px;
+    }
+
+    .footerButton {
+        float: right;
+    width: 100px;
+    height: 34px;
+    top: 5px;
+    padding-top: 6px;
+    margin-right: 15px;
+    }
+
+    .verlayImage {
+        margin-left: 20px;
+        width: 30px;
+        margin-top: 10px;
+    }
+
+    .overlayTxt {
+        color: white;
+        margin-top: 0px;
+    }
+}

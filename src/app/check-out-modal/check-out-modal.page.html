@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" style="margin-left: 10px;" (click)="dismiss()">
+      <ion-icon slot="start" class="iconSize" name="arrow-back-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>Confirm Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div>
+    <ion-list>
+      <ion-item lines="none">
+        <div class="vegOrNonVegSquare"></div>
+        <ion-label class="itemLabel">
+          <p class="item">
+            French Fries
+          </p>
+          <p class="item">
+            Rs75/-
+          </p>
+        </ion-label>
+        <div class="customButton">
+          <div style="color: #3880FF;" (click)="decrementCount()">
+            <span style="margin-left: 15px;margin-right: 2px;">
+              -
+            </span>
+            <span style="margin-right: 2px;">
+              1
+            </span>
+            <span (click)="increamentCount()">
+              +
+            </span>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item no-lines>
+        <div class="vegOrNonVegSquare"></div>
+        <ion-label class="itemLabel">
+          <p class="item">
+            French Fries
+          </p>
+          <p class="item">
+            Rs75/-
+          </p>
+        </ion-label>
+        <div class="customButton">
+          <div style="color: #3880FF;" (click)="decrementCount()">
+            <span style="margin-left: 15px;margin-right: 2px;">
+              -
+            </span>
+            <span style="margin-right: 2px;">
+              1
+            </span>
+            <span (click)="increamentCount()">
+              +
+            </span>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div>
+    <p style="color: blue ;">PAYMENT DETAILS</p>
+  </div>
+  
+  <div>
+    <p>
+      <span style="float: left;">Item Total</span>
+      <span style="float: right;"> Rs 124/-</span>
+    </p><br>
+
+    <p>
+      <span style="float: left;">Tax</span>
+      <span style="float: right;"> Rs 2/-</span>
+    </p><br>
+
+    <p>
+      <span style="float: left;">Packing</span>
+      <span style="float: right;"> Rs 20/-</span>
+    </p><br>
+
+    <p>
+      <span style="float: left;">Partner Delivery Fee</span>
+      <span style="float: right;"> Free </span>
+    </p><br>
+
+    <p>
+      <span style="float: left;">Offer Discount</span>
+      <span style="float: right;"> Rs 20/- </span>
+    </p><br>
+
+    <p>
+      <span style="float: left;">To Pay</span>
+      <span style="float: right;"> Rs 267/- </span>
+    </p><br>
+  </div>
+  
+  </ion-content>
+
+  <ion-footer>
+    <p>
+      You Saved Rs 20/-
+    </p>
+    <button slot="end">hello</button>
+  </ion-footer>
+

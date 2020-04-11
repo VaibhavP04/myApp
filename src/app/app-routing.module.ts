@@ -19,8 +19,24 @@ const routes: Routes = [
     loadChildren: './location/location.module#LocationModule'
   },
   {
+    path: 'category-modal',
+    loadChildren: () => import('./category-modal/category-modal.module').then( m => m.CategoryModalPageModule)
+  },
+  {
+    path: 'products',
+    loadChildren: () => import('./products/products.module').then( m => m.ProductsPageModule)
+  },
+  {
+    path: 'items',
+    loadChildren: () => import('./items/items.module').then( m => m.ItemsPageModule)
+  },
+  {
     path: 'order-summary',
     loadChildren: './order/order-summary.module#OrderSummaryModule'
+  },
+  {
+    path: 'order-confirmation',
+    loadChildren: './confirm/order-confimation/order-confirmation.module#OrderConfirmationModule'
   },
   {
     path: 'confirm-order',
@@ -54,6 +70,7 @@ const routes: Routes = [
     path: 'about',
     loadChildren: './tab4/about/about.module#AboutModule'
   }
+
 ];
 @NgModule({
   imports: [

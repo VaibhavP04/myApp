@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab4',
@@ -9,13 +10,22 @@ export class Tab4Component implements OnInit {
 
   showAccountDetails = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   showEditAccount() {
     this.showAccountDetails = true
+  }
+
+  logout() {
+    const navExtas: NavigationExtras = {
+      state: {
+        logout: true
+      }
+    };
+    this.router.navigate(['/login'], navExtas);
   }
 
 }

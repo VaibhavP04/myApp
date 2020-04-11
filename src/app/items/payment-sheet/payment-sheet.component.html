@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-button (click)= "close()">
+        <ion-back-button ></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Select Payment Method
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <p class="ion-padding">Total Amount to Pay: <b>{{cart.totalPrice}}/-</b></p>
+  <div class="present-order"><p>Default Payment</p></div>
+  <div class="payment-setup">
+    <div class="align-start">
+      <img src="/assets/ic_visa.png" /> 
+      <p>Axis Bank</p>
+    </div>
+    <div class="align-end">
+      <ion-radio slot="end"></ion-radio>
+    </div>
+  </div>
+  <div class="present-order"><p>Other Payment Type</p></div>
+  <div class="paymet-gateways">
+    <a href="javascript:void(0);" (click)="openModal()"><img src="/assets/ic_paypal.png" /></a>
+    <a href="javascript:void(0);" (click)="openModal()"><img src="/assets/ic_amazonpay.png" /></a>
+    <a href="javascript:void(0);" (click)="openModal()"><img src="/assets/ic_bhimupi.png" /></a>
+    <a href="javascript:void(0);" (click)="openModal()"><img src="/assets/ic_gpay.png" /></a>
+    <a href="javascript:void(0);" (click)="openModal()"><img src="/assets/ic_paytm.png" /></a>
+  </div>
+</ion-content>

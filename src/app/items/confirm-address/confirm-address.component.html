@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button defaultHref (click)="close()"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Confirm Address</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-row class="address-details">
+    <ion-col size="8">
+      <p>Deliver to <b>HOME</b></p>
+      <p>188, Prestige Colony, Gopi Residen...</p>
+    </ion-col>
+    <ion-col size="4" class="ion-text-end ion-align-self-center">
+      <a href="javascript:void(0);">Change</a>
+    </ion-col>
+  </ion-row>
+  <div class="saved-locations">
+    <ion-chip>
+      <ion-label color="primary">Home</ion-label>
+    </ion-chip>
+    <ion-chip>
+      <ion-label color="primary">Office</ion-label>
+    </ion-chip>
+    <ion-chip>
+      <ion-label color="primary">Others</ion-label>
+    </ion-chip>
+  </div>
+</ion-content>
+
+
+<ion-footer>
+  <ion-row class="ion-padding">
+    <ion-col size="4">
+      <p><span>You Saved.</span> 20/-</p>
+    </ion-col>
+    <ion-col size="8" class="ion-align-self-end ion-text-end">
+      <ion-button color="primary" (click)="OpenModel()">Pay {{cart.totalPrice}}/-</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

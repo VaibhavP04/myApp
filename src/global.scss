@@ -24,3 +24,23 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+ion-searchbar{
+    .searchbar-input-container {
+    .searchbar-input{
+        border-radius: 30px !important;
+    }
+}
+}
+
+input.searchbar-input.sc-ion-searchbar-ios {
+    border: 0.1px solid black;
+}
+
+input.searchbar-input.sc-ion-searchbar-md {
+    border: 0.1px solid black;
+}
+
+.button-color-changed {
+    color: blue;
+    background-color: blue
+  }
