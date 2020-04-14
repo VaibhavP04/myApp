@@ -10,8 +10,8 @@ export class Tab1Page {
 
   constructor(private router: Router) {}
 
-  navigate() {
-    this.router.navigate(['/category-modal']);
+  navigate(id: string) {
+    this.router.navigate(['/category-modal/'+id]);
   }
 
 }

@@ -1,5 +1,5 @@
 <ion-header>
-  <img src="/assets/ic_plateone.png" class="headerImg">
+  <img src="{{imageUrl}}" class="headerImg">
 
   <div>
     <span class="headerIcon headerIconleft">
@@ -35,7 +35,7 @@
 <ion-content>
   <div class="ion-padding">
     <ion-label class="headerLabel">
-      Happy Bones
+      {{items[0].heading}}
       <div class="chip-right">
         <ion-chip class="chipFont">
           <ion-icon name="star" class="startIcon"></ion-icon>
@@ -58,7 +58,7 @@
 
   <div class="ion-padding search-bar" >
     <ion-searchbar showCancelButton="never" color="white" class="searchBar"></ion-searchbar>
-    <ion-item>
+    <ion-item *ngIf="categoryId == 1">
       <span>Veg</span>
       <ion-toggle slot="start" name="blueberry"></ion-toggle>
     </ion-item>
@@ -67,13 +67,16 @@
   <div>
     <ion-list *ngFor="let item of items">
       <ion-item no-lines>
-        <div class="vegOrNonVegSquare"></div>
-        <ion-label class="itemLabel">
+        <div class="vegOrNonVegSquare" *ngIf="item.categoryId == 1"></div>
+        <ion-thumbnail slot="start" *ngIf="item.categoryId == 2">
+          <img src="{{item.imageUrl}}">
+        </ion-thumbnail>
+        <ion-label class="itemLabel" [class.itemLabel]="item.categoryId == 1">
           <p class="item">
             {{item.name}}
           </p>
           <p class="item">
-            Rs{{item.price}}/-
+            Rs {{item.price}}/- <span *ngIf="item.categoryId == 2">(1 kg)</span>
           </p>
         </ion-label>
         <ion-button expand="full" *ngIf="item.qtyInCart == 0" (click)="addToCart(item.id)" fill="outline" slot="end"

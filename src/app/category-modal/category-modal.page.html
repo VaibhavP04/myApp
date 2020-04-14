@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Order from Restraunt</ion-title>
+    <ion-title>Order from {{displayList[0].categoryName}}</ion-title>
   </ion-toolbar>
   <ion-toolbar class="topBottomPadding">
     <ion-searchbar class="app-search-bar" showCancelButton="never" color="white"></ion-searchbar>
@@ -11,127 +11,36 @@
 </ion-header>
 
 <ion-content>
-    <ion-card (click)="seeProducts()">
-    <img src="/assets/ic_plateone.png" />
 
-    <div class="chip-left">
-      <ion-chip>
-        <ion-label>Open</ion-label>
-      </ion-chip>
+  <div *ngFor="let category of displayList">
+    <ion-card (click)="seeProducts(category.categoryId)">
+      <img src="{{category.imageUrl}}" />
 
-    </div>
+      <div class="chip-left">
+        <ion-chip>
+          <ion-label>{{category.status}}</ion-label>
+        </ion-chip>
+      </div>
 
-    <div class="chip-right">
-      <ion-chip>
-        <ion-icon name="star"></ion-icon>
-        <ion-label>4.5</ion-label>
-      </ion-chip>
-    </div>
+      <div class="chip-right">
+        <ion-chip>
+          <ion-icon name="star"></ion-icon>
+          <ion-label>{{category.rating}}</ion-label>
+        </ion-chip>
+      </div>
 
+      <ion-card-content>
+        <ion-label class="label">{{category.name}}</ion-label>
+        <ion-chip color="green">
+          <ion-label>{{category.status}}</ion-label>
+        </ion-chip>
 
-    <ion-card-content>
-      <ion-label class="label">Happy Bones</ion-label>
-      <ion-chip color="green">
-        <ion-label>Open</ion-label>
-      </ion-chip>
-      <ion-chip>
-        <ion-label>Open</ion-label>
-      </ion-chip>
+        <ion-chip>
+          <ion-label>{{category.status}}</ion-label>
+        </ion-chip>
 
-      <p class="suntitle">#394, Some st, Bangalore, 560011</p>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card (click)="seeProducts()">
-    <img src="/assets/ic_platetwo.png" />
-
-    <div class="chip-left">
-      <ion-chip>
-        <ion-label>Open</ion-label>
-      </ion-chip>
-
-    </div>
-
-    <div class="chip-right">
-      <ion-chip>
-        <ion-icon name="star"></ion-icon>
-        <ion-label>4.5</ion-label>
-      </ion-chip>
-    </div>
-
-
-    <ion-card-content>
-      <ion-label class="label">Happy Bones</ion-label>
-      <ion-chip color="green">
-        <ion-label>Open</ion-label>
-      </ion-chip>
-      <ion-chip>
-        <ion-label>Open</ion-label>
-      </ion-chip>
-
-      <p class="suntitle">#394, Some st, Bangalore, 560011</p>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card (click)="seeProducts()">
-    <img src="/assets/ic_plateone.png" />
-
-    <div class="chip-left">
-      <ion-chip>
-        <ion-label>Open</ion-label>
-      </ion-chip>
-
-    </div>
-
-    <div class="chip-right">
-      <ion-chip>
-        <ion-icon name="star"></ion-icon>
-        <ion-label>4.5</ion-label>
-      </ion-chip>
-    </div>
-
-
-    <ion-card-content>
-      <ion-label class="label">Happy Bones</ion-label>
-      <ion-chip color="green">
-        <ion-label>Open</ion-label>
-      </ion-chip>
-      <ion-chip>
-        <ion-label>Open</ion-label>
-      </ion-chip>
-
-      <p class="suntitle">#394, Some st, Bangalore, 560011</p>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card (click)="seeProducts()">
-    <img src="/assets/ic_plateone.png" />
-
-    <div class="chip-left">
-      <ion-chip>
-        <ion-label>Open</ion-label>
-      </ion-chip>
-
-    </div>
-
-    <div class="chip-right">
-      <ion-chip>
-        <ion-icon name="star"></ion-icon>
-        <ion-label>4.5</ion-label>
-      </ion-chip>
-    </div>
-
-
-    <ion-card-content>
-      <ion-label class="label">Happy Bones</ion-label>
-      <ion-chip color="green">
-        <ion-label>Open</ion-label>
-      </ion-chip>
-      <ion-chip>
-        <ion-label>Open</ion-label>
-      </ion-chip>
-
-      <p class="suntitle">#394, Some st, Bangalore, 560011</p>
-    </ion-card-content>
-  </ion-card>
+        <p class="suntitle">{{category.address}}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

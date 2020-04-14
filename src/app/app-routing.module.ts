@@ -19,15 +19,15 @@ const routes: Routes = [
     loadChildren: './location/location.module#LocationModule'
   },
   {
-    path: 'category-modal',
+    path: 'category-modal/:id',
     loadChildren: () => import('./category-modal/category-modal.module').then( m => m.CategoryModalPageModule)
   },
   {
-    path: 'products',
+    path: 'products/:id',
     loadChildren: () => import('./products/products.module').then( m => m.ProductsPageModule)
   },
   {
-    path: 'items',
+    path: 'items/:id',
     loadChildren: () => import('./items/items.module').then( m => m.ItemsPageModule)
   },
   {
