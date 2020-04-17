@@ -11,15 +11,18 @@ import { AppComponent } from './app.component';
 import { IonicStorageModule } from '@ionic/storage';
 import { NgOtpInputModule } from  'ng-otp-input';
 import { FCM } from '@ionic-native/fcm/ngx';
+import { UniqueDeviceID } from '@ionic-native/unique-device-id/ngx';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), IonicStorageModule.forRoot(), AppRoutingModule, NgOtpInputModule],
+  imports: [BrowserModule,HttpClientModule, IonicModule.forRoot(), IonicStorageModule.forRoot(), AppRoutingModule, NgOtpInputModule],
   providers: [
     StatusBar,
     SplashScreen,
     FCM,
+    UniqueDeviceID,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
